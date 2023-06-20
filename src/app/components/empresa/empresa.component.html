@@ -1,0 +1,65 @@
+<div class="bg-dark p-4">
+    <div class="row">
+        <div class="col-md-6 text-light">
+            <div id="formTitle" class="text-center">
+                <h1>Cadastro de Empresas</h1>
+            </div>
+            <form [formGroup]="formGroupEmpresa" class="d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-start flex-column p-1">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" name="name" formControlName="name">
+                    </div>
+
+                    <div class="d-flex justify-content-start flex-column p-1">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" name="email" formControlName="email">
+                    </div>
+                    <div class="d-flex justify-content-start flex-column p-1">
+                        <label for="atuacao">Atuação</label>
+                        <input type="text" class="form-control" name="atuacao" formControlName="atuacao">
+                    </div>
+
+                    <div class="d-flex justify-content-start flex-column p-1">
+                        <label for="contact">Contato</label>
+                        <input type="text" class="form-control" name="contact" formControlName="contact">
+                    </div>
+                    <div class="d-flex justify-content-start flex-column p-1 mb-3">
+                        <label for="funcionario">Nº Funcionários</label>
+                        <input type="number" class="form-control" name="funcionario" formControlName="funcionario">
+                    </div>
+                    <div class="d-flex justify-content-start flex-column p-1">
+                        <button class="btn btn-primary" (click)="saveEmpresa()">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6 tabela">
+            <table class="table table-striped table-dark text-light">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Atuação</th>
+                        <th scope="col">Contato</th>
+                        <th scope="col">Funcionários</th>
+                        <th scope="col">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Empresa of empresa">
+                        <th scope="row">{{Empresa.id}}</th>
+                        <td>{{Empresa.name}}</td>
+                        <td>{{Empresa.email}}</td>
+                        <td>{{Empresa.atuacao}}</td>
+                        <td>{{Empresa.contact}}</td>
+                        <td>{{Empresa.funcionario}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
