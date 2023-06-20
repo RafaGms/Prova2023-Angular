@@ -9,7 +9,7 @@ import { Empresa } from '../components/empresa/empresa';
 })
 export class EmpresaService {
 
-  url: string = 'http://localhost:3000/empresa';
+  url: string = 'http://localhost:8080/empresas';
 
   constructor(private http: HttpClient) { }
 

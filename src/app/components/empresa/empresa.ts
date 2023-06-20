@@ -4,5 +4,5 @@ export interface Empresa{
    email: string;
    atuacao: string;
    contact: string;
-   funcionario: Number;
+   funcionario: number;
 }
