@@ -44,7 +44,11 @@ export class EmpresaComponent {
     })
   }
 
-
-
-
+  removeEmpresa(empresa: Empresa): void {
+    this.empresaService.removeEmpresa(empresa).subscribe({
+      next: () => {
+        this.empresa.splice(this.empresa.indexOf(empresa), 1);
+      }
+    })
+  }
 }
